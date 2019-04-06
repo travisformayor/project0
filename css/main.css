@@ -28,8 +28,8 @@ To Do:
 - apply all prefixes
  */
 body {
-  margin-left: 20px;
-  /* margin: 0 auto; */
+  /* margin-left: 20px; */
+  margin: 0 auto;
   max-width: 1500px;
 }
 header {
@@ -66,7 +66,7 @@ header {
   box-shadow: inset 0px -30px 25px rgba(0, 0, 0, 0.2),
   inset 0px -20px 50px rgba(240, 230, 90, 0.7), 
   0 0 100px rgba(0,0,0,0.5);
-  border-radius: 0 0 20px 20px; /* Bottom corners only */
+  border-radius: 0 0 20px 20px; Bottom corners only
 } */
 .bezel {
   /* Top Bezel Curve Effect */
@@ -88,7 +88,7 @@ header {
   border-radius: 25px;
   background: #444;
   border: 8px #444 solid;
-  box-shadow: 0px 10px 20px rgba(0, 0, 0, .5);
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, .5); /* inset's outer shadow */
   vertical-align: top;
 }
 .bezel .inset::before {
@@ -115,8 +115,7 @@ header {
   box-sizing: border-box;
   width: 100%;
   height: 100%;
-  background: radial-gradient(rgba(0, 0, 0, 0.7) 50%, rgba(0, 0, 0, 0) 100%);
-  /*viewport shadow */
+  background: radial-gradient(rgba(0, 0, 0, 0.7) 50%, rgba(0, 0, 0, 0) 100%); /* inner bezel shadow */
   z-index: 2;
 }
 
@@ -134,8 +133,7 @@ header {
   height: 100%;
   border-radius: 50% / 5%;
   background-color: rgb(155, 155, 155);
-  box-shadow: inset 0 -220px 200px rgba(0, 0, 0, 0.5);
-  /* screen overlay shadow */
+  box-shadow: inset 0 -220px 200px rgba(0, 0, 0, 0.5); /* screen overlay line shadow */
 }
 
 .bezel .screen-container {
@@ -145,7 +143,7 @@ header {
   width: 100%;
   overflow: hidden;
   border-radius: 50% / 5%;
-  box-shadow: inset 0px 0px 50px rgb(0, 0, 0);
+  box-shadow: inset 0px 0px 50px rgb(0, 0, 0); /* screen overlay edge shadow */
 
 }
 
@@ -181,20 +179,6 @@ h1.header {
 
 
 /* Keyboard ===================================== */
-
-/* .key {
-  background-color: orangered;
-  width: 150px;
-  height: 75px;
-  text-align: center;
-  border-radius: 20px;
-  border-width: 10px 15px 25px;
-  border-style: solid;
-  border-color: rgba(0, 0, 0, 0.2)
-                rgba(0, 0, 0, 0.3)
-                rgba(0, 0, 0, 0.5);
- 
-} */
 .key-cover {
   background-color: beige;
   /* width: 100%; */
@@ -243,17 +227,16 @@ h1.header {
                 rgba(0, 0, 0, 0.5);
 }
 .key {
-  box-sizing: border-box;
-  text-align: center;
-  background-color: rgb(255, 140, 60);
-  width: 150px;
-  height: 63px;
   position: relative;
   top: -5px;
   left: -5px;
-  border-radius: 4px;
+  width: 150px;
+  height: 63px;
   color: white;
-  
+  text-align: center;
+
+  background-color: rgb(255, 140, 60);
+  border-radius: 4px;
   box-shadow: 0px 0px 10px rgb(255, 145, 0),
   inset 0px 0px 15px rgb(255, 140, 00);
 }
@@ -296,7 +279,69 @@ p.keybottom {
    /* font-size:  */
 }
 
-/* Terminal ===================================== */
+/* Info Terminals =============================== */
+
+
+.term-screen-border {
+  display: inline-block;
+  overflow: hidden;
+}
+.term-sides {
+  border-radius: 6% / 50%;
+}
+.term-topbottom {
+  border-radius: 50% / 5%;
+}
+
+.term-inner-bezel {
+  display: inline-block;
+  background-color: #444;
+  border-radius: 25px;
+  border-style: solid;
+  border-width: 100px 150px;
+  border-color: rgba(0, 0, 0, 0.5) /* top */
+                rgba(0, 0, 0, 0.3) /* left-right */
+                rgba(0, 0, 0, 0.1);/* bottom */
+  /* z-index: 1; */
+  background: radial-gradient(rgba(0, 0, 0, 0.7) 40%, rgba(0, 0, 0, 0.5) 100%); /* inner bezel shadow */
+}
+.term-screen-container {
+  transform: scale(1.35);
+  position: relative;
+  top: 4px;
+  
+  /* z-index: 2; */
+}
+.term-screen {
+  width: 600px;
+  height: 400px;
+  box-shadow: inset 0px 0px 50px rgb(0, 0, 0); /* screen overlay edge shadow */
+
+  /* background-color: #444; */
+  background-color: rgba(68, 68, 68, 1);
+}
+.term-outer-bezel {
+  display: inline-block;
+  border-radius: 55px;
+  border: 25px solid #333;
+}
+.term-seam {
+  display: inline-block;
+  /* margin: 1em; */
+  padding: 8px;
+  border-radius: 55px;
+  box-shadow: inset 0px 0px 25px rgba(0, 0, 0, 0.8);
+}
+.term-case {
+  margin: 50px;
+  background-color: beige;
+  padding: 50px;
+  border-radius: 25px;
+  display: inline-block;
+  box-shadow: 0px 0px 100px rgba(0,0,0,0.5), /* Background Shadow */
+  inset 20px -40px 100px rgba(240, 230, 90, 0.7), /* Yellow Sides */
+  inset 5px 30px 10px white; /* Cover Top Curve */
+ }
 
 
 
