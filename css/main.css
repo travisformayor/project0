@@ -60,14 +60,14 @@ header {
   padding: 8px;
   box-shadow: inset 0px 0px 11px rgba(0, 0, 0, 0.8); /* Monitor Bottom Seam */
 }
-.bottom-cover {
+/* .bottom-cover {
   height: 60px;
   background-color: beige;
   box-shadow: inset 0px -30px 25px rgba(0, 0, 0, 0.2),
   inset 0px -20px 50px rgba(240, 230, 90, 0.7), 
   0 0 100px rgba(0,0,0,0.5);
   border-radius: 0 0 20px 20px; /* Bottom corners only */
-}
+} */
 .bezel {
   /* Top Bezel Curve Effect */
   background: linear-gradient(to bottom, #333 4%, rgb(134, 134, 134) 9%, #333 30%);
@@ -298,62 +298,7 @@ p.keybottom {
 
 /* Terminal ===================================== */
 
-.term {
-  display: inline-block;
-  margin: 20px auto;
-}
-.term-topbar {
-  background-color: #333;
-  width: 100%;
-  height: 35px;
-  padding: 0 10px;
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-end;
-  align-items: center;
-}
-.term-topbar-elm {
-  height: 10px;
-  width: 10px;
-  margin: 0 10px;
-}
-.menu {
-  background-color: #999;
-  margin-right: auto;
-}
-.min {
-  border-bottom: 3px solid #999;
-}
-.max {
-  border: 3px solid #999;
-}
-.x {
-  color: #999;
-  font-size: 1.5em;
-  font-weight: bold;
-  line-height: .5em;
-}
-.term-content {
-  background-color: rgb(37, 37, 255);
-  margin-top: -5px;
-  width: 1000px;
-  height: 600px;
-  
-  border-radius: 7px;
-  border-width: 0px 10px 10px;
-  border-style: ridge;
-  border-color: #333;
 
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-}
-.term-col {
-  margin: 30px;
-  border: 5px solid white;
-  width: 100%;
-  height: auto;
-}
 
 
 
