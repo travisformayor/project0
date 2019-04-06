@@ -3,9 +3,9 @@ http://aleclownes.com/2017/02/01/crt-display.html */
 
 @keyframes flicker {
   0% {
-    opacity: 0.27861;
+    opacity: 0.0;
   }
-  5% {
+  /* 5% {
     opacity: 0.34769;
   }
   10% {
@@ -13,11 +13,11 @@ http://aleclownes.com/2017/02/01/crt-display.html */
   }
   15% {
     opacity: 0.90626;
-  }
+  } */
   20% {
-    opacity: 0.18128;
+    opacity: 0.2;
   }
-  25% {
+  /* 25% {
     opacity: 0.83891;
   }
   30% {
@@ -25,11 +25,11 @@ http://aleclownes.com/2017/02/01/crt-display.html */
   }
   35% {
     opacity: 0.67807;
-  }
+  } */
   40% {
-    opacity: 0.26559;
+    opacity: 0.8;
   }
-  45% {
+  /* 45% {
     opacity: 0.84693;
   }
   50% {
@@ -37,11 +37,11 @@ http://aleclownes.com/2017/02/01/crt-display.html */
   }
   55% {
     opacity: 0.08594;
-  }
+  } */
   60% {
-    opacity: 0.20313;
+    opacity: 0.2;
   }
-  65% {
+  /* 65% {
     opacity: 0.71988;
   }
   70% {
@@ -49,11 +49,11 @@ http://aleclownes.com/2017/02/01/crt-display.html */
   }
   75% {
     opacity: 0.37288;
-  }
+  } */
   80% {
-    opacity: 0.71428;
+    opacity: 0.7;
   }
-  85% {
+  /* 85% {
     opacity: 0.70419;
   }
   90% {
@@ -61,77 +61,77 @@ http://aleclownes.com/2017/02/01/crt-display.html */
   }
   95% {
     opacity: 0.36108;
-  }
+  } */
   100% {
-    opacity: 0.24387;
+    opacity: 0.3;
   }
 }
 @keyframes textShadow {
   0% {
     text-shadow: 0.4389924193300864px 0 1px rgba(0,30,255,0.5), -0.4389924193300864px 0 1px rgba(255,0,80,0.3), 0 0 3px;
   }
-  5% {
+  /* 5% {
     text-shadow: 2.7928974010788217px 0 1px rgba(0,30,255,0.5), -2.7928974010788217px 0 1px rgba(255,0,80,0.3), 0 0 3px;
-  }
+  } */
   10% {
     text-shadow: 0.02956275843481219px 0 1px rgba(0,30,255,0.5), -0.02956275843481219px 0 1px rgba(255,0,80,0.3), 0 0 3px;
   }
-  15% {
+  /* 15% {
     text-shadow: 0.40218538552878136px 0 1px rgba(0,30,255,0.5), -0.40218538552878136px 0 1px rgba(255,0,80,0.3), 0 0 3px;
-  }
+  } */
   20% {
-    text-shadow: 3.4794037899852017px 0 1px rgba(0,30,255,0.5), -3.4794037899852017px 0 1px rgba(255,0,80,0.3), 0 0 3px;
+    text-shadow: 8.4794037899852017px 0 1px rgba(0,30,255,0.5), -3.4794037899852017px 0 1px rgba(255,0,80,0.3), 0 0 3px;
   }
-  25% {
+  /* 25% {
     text-shadow: 1.6125630401149584px 0 1px rgba(0,30,255,0.5), -1.6125630401149584px 0 1px rgba(255,0,80,0.3), 0 0 3px;
-  }
+  } */
   30% {
-    text-shadow: 0.7015590085143956px 0 1px rgba(0,30,255,0.5), -0.7015590085143956px 0 1px rgba(255,0,80,0.3), 0 0 3px;
+    text-shadow: 10.7015590085143956px 0 1px rgba(0,30,255,0.5), -0.7015590085143956px 0 1px rgba(255,0,80,0.3), 0 0 3px;
   }
-  35% {
+  /* 35% {
     text-shadow: 3.896914047650351px 0 1px rgba(0,30,255,0.5), -3.896914047650351px 0 1px rgba(255,0,80,0.3), 0 0 3px;
-  }
+  } */
   40% {
     text-shadow: 3.870905614848819px 0 1px rgba(0,30,255,0.5), -3.870905614848819px 0 1px rgba(255,0,80,0.3), 0 0 3px;
   }
-  45% {
+  /* 45% {
     text-shadow: 2.231056963361899px 0 1px rgba(0,30,255,0.5), -2.231056963361899px 0 1px rgba(255,0,80,0.3), 0 0 3px;
-  }
+  } */
   50% {
     text-shadow: 0.08084290417898504px 0 1px rgba(0,30,255,0.5), -0.08084290417898504px 0 1px rgba(255,0,80,0.3), 0 0 3px;
   }
-  55% {
+  /* 55% {
     text-shadow: 2.3758461067427543px 0 1px rgba(0,30,255,0.5), -2.3758461067427543px 0 1px rgba(255,0,80,0.3), 0 0 3px;
-  }
+  } */
   60% {
-    text-shadow: 2.202193051050636px 0 1px rgba(0,30,255,0.5), -2.202193051050636px 0 1px rgba(255,0,80,0.3), 0 0 3px;
+    text-shadow: 2.202193051050636px 0 1px rgba(0,30,255,0.5), -7.202193051050636px 0 1px rgba(255,0,80,0.3), 0 0 3px;
   }
-  65% {
+  /* 65% {
     text-shadow: 2.8638780614874975px 0 1px rgba(0,30,255,0.5), -2.8638780614874975px 0 1px rgba(255,0,80,0.3), 0 0 3px;
-  }
+  } */
   70% {
     text-shadow: 0.48874025155497314px 0 1px rgba(0,30,255,0.5), -0.48874025155497314px 0 1px rgba(255,0,80,0.3), 0 0 3px;
   }
-  75% {
+  /* 75% {
     text-shadow: 1.8948491305757957px 0 1px rgba(0,30,255,0.5), -1.8948491305757957px 0 1px rgba(255,0,80,0.3), 0 0 3px;
-  }
+  } */
   80% {
     text-shadow: 0.0833037308038857px 0 1px rgba(0,30,255,0.5), -0.0833037308038857px 0 1px rgba(255,0,80,0.3), 0 0 3px;
   }
-  85% {
+  /* 85% {
     text-shadow: 0.09769827255241735px 0 1px rgba(0,30,255,0.5), -0.09769827255241735px 0 1px rgba(255,0,80,0.3), 0 0 3px;
-  }
+  } */
   90% {
     text-shadow: 3.443339761481782px 0 1px rgba(0,30,255,0.5), -3.443339761481782px 0 1px rgba(255,0,80,0.3), 0 0 3px;
   }
-  95% {
+  /* 95% {
     text-shadow: 2.1841838852799786px 0 1px rgba(0,30,255,0.5), -2.1841838852799786px 0 1px rgba(255,0,80,0.3), 0 0 3px;
-  }
+  } */
   100% {
     text-shadow: 2.6208764473832513px 0 1px rgba(0,30,255,0.5), -2.6208764473832513px 0 1px rgba(255,0,80,0.3), 0 0 3px;
   }
 }
-.crt::after {
+.crt::after { /* Flicker Effect */
   content: " ";
   display: block;
   position: absolute;
@@ -143,9 +143,9 @@ http://aleclownes.com/2017/02/01/crt-display.html */
   opacity: 0;
   z-index: 2;
   pointer-events: none;
-  animation: flicker 3s infinite;
+  animation: flicker 1s infinite;
 }
-.crt::before {
+.crt::before { /* Pixels */
   content: " ";
   display: block;
   position: absolute;
@@ -158,7 +158,38 @@ http://aleclownes.com/2017/02/01/crt-display.html */
   background-size: 100% 3px, 3px 100%;
   pointer-events: none;
 }
-.crt {
+.crt { /* Text Distort Effect */
   animation: textShadow 1s infinite;
 }
 
+/* Scan Lines
+By https://codepen.io/Doron_B/pen/ZWOxaN */
+.scan-effect::before {
+  content: " ";
+  position: absolute;
+  width: 100%;
+  height: 50%;
+
+  background: rgba(255, 255, 255, .3);
+  animation: scaneffect 10000ms infinite linear;
+  border-radius: 50% / 1%;
+}
+@keyframes scaneffect {
+  0% {
+    top: -100%;
+    opacity: 0.4;
+  }
+  20% {
+    opacity: 0.3;
+  }
+  50% {
+    opacity: 0.1;
+  }
+  70% {
+    opacity: 0.1;
+  }
+  100% {
+    top: 100%;
+    opacity: 0.3;
+  }
+}
