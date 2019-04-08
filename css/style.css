@@ -17,17 +17,6 @@
   --screen-color: #444;
   --key-tray: rgb(77, 71, 71);
 }
-/* To Do */
-/* reposition profile photo */
-/*To Do:
-- Give top edge a bightness that looks like a bend. See VT-100 image
- ^ linear gradient property, narrow and up top, across all. absolute position
-- apply all prefixes
-- remove cpu demands. the font glitching is doing it. glitch test codepen better?
-- Add curved top shadow to screens to give sense its bowing out
-- ask about :before and :after for styling
-- add shadows or gradients to the inside bezel to add depth/light bleed effect
- */
 
 * {
   padding: 0;
@@ -248,6 +237,38 @@ img#me {
   margin: auto;
   width: 90%;
   height: auto;
+}
+
+
+.error {
+	border: 2px solid black;
+}
+.error-message {
+	color: white;
+	font-size: .9em;
+	margin-top: -10px;
+	margin-bottom: 13px;
+	text-align: left;
+	display: none;
+}
+::placeholder {
+  color: white;
+  font-weight: bolder;
+}
+form.contact {
+  padding: 10px 100px;
+  display: flex;
+  flex-direction: column;
+  color: white;
+  font-size: 1.25em;
+}
+form.contact input, form.contact textarea, form.contact button {
+  margin: 10px 0;
+  background-color: rgb(124, 124, 124);
+  line-height: 1.2em;
+  /* color: white; */
+  font-weight: bolder;
+
 }
 
 /* Navigation Keyboard ========================== */

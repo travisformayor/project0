@@ -144,7 +144,7 @@ http://aleclownes.com/2017/02/01/crt-display.html */
   z-index: 2;
   pointer-events: none;
   /* CPU friendly?  */
-  animation: flicker 1s infinite;
+  /* animation: flicker 1s infinite; */
 }
 .crt::before { /* Pixels. CPU Friendly ? */
   content: " ";
@@ -168,13 +168,13 @@ http://aleclownes.com/2017/02/01/crt-display.html */
 /* Scan Lines
 By https://codepen.io/Doron_B/pen/ZWOxaN */
 .scan-effect::before {
-  content: " ";
+  /* content: " "; */
   position: absolute;
   width: 100%;
   height: 50%;
 
   background: rgba(255, 255, 255, .3);
-  animation: scaneffect 10000ms infinite linear;
+  /* animation: scaneffect 10s infinite linear; */
   border-radius: 50% / 1%;
 }
 @keyframes scaneffect {

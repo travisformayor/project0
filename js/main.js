@@ -1,13 +1,4 @@
 console.log('hello');
-// To Do ============================== //
-// fix caro big: clicking fast breaks it. 
-//  fix: addClass hide to All in collection on each click
-// quotes don't flicker
-// Nav buttons fill in the header text with "loading..." then title
-// Make keys map to press of there lower side characters (change, not fn's)
-// Make it so when on project button, clicking it again doesn't toggle slide
-// Hamburger button bug: if you toggle it down and then re-expand, it stays hidden 
-// Make whole keyboard slide up, not buttons, for hamburger menu
 
 // Flicker on load effect ============= //
 function flicker(elm, direction) {
@@ -142,3 +133,28 @@ function controlSwitch(key, e) {
     .removeClass('off')
     .addClass('on');
 }
+
+
+let $submit = $('form.contact');
+let $inputs = $('.contact input, .contact textarea');
+
+// console.log($inputs);
+$submit.on('click', event => {
+    event.preventDefault();
+    console.log('click');
+    for (let i = 0; i < $inputs.length; i++) {
+        if (!$inputs.eq(i).val()) {
+            $inputs.eq(i).addClass('error');
+            $inputs.eq(i).siblings('p').fadeIn('slow');
+        } else {
+            $inputs.eq(i).removeClass('error');
+            $inputs.eq(i).siblings('p').fadeOut('slow');
+        }
+    }
+});
+
+// $('form.contact').on('submit', function(e) {
+//   e.preventDefault();
+
+  
+// })
