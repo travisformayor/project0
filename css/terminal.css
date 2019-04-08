@@ -27,7 +27,7 @@ http://aleclownes.com/2017/02/01/crt-display.html */
     opacity: 0.67807;
   } */
   40% {
-    opacity: 0.8;
+    opacity: 1;
   }
   /* 45% {
     opacity: 0.84693;
@@ -51,7 +51,7 @@ http://aleclownes.com/2017/02/01/crt-display.html */
     opacity: 0.37288;
   } */
   80% {
-    opacity: 0.7;
+    opacity: 1;
   }
   /* 85% {
     opacity: 0.70419;
@@ -143,9 +143,9 @@ http://aleclownes.com/2017/02/01/crt-display.html */
   opacity: 0;
   z-index: 2;
   pointer-events: none;
-  animation: flicker 1s infinite;
+  /* animation: flicker 1s infinite; Very cpu friendly :) */
 }
-.crt::before { /* Pixels */
+.crt::before { /* Pixels. CPU Friendly :) */
   content: " ";
   display: block;
   position: absolute;
@@ -159,7 +159,9 @@ http://aleclownes.com/2017/02/01/crt-display.html */
   pointer-events: none;
 }
 .crt { /* Text Distort Effect */
-  animation: textShadow 1s infinite;
+  /* This has a Massive CPU Hit! */
+  /* Make an alternative! To Do */
+  /* animation: textShadow 1s infinite; */
 }
 
 /* Scan Lines
@@ -171,7 +173,7 @@ By https://codepen.io/Doron_B/pen/ZWOxaN */
   height: 50%;
 
   background: rgba(255, 255, 255, .3);
-  animation: scaneffect 10000ms infinite linear;
+  /* animation: scaneffect 10000ms infinite linear; */
   border-radius: 50% / 1%;
 }
 @keyframes scaneffect {
