@@ -160,9 +160,3 @@ $submit.on('click', event => {
         }
     }
 });
-
-// $('form.contact').on('submit', function(e) {
-//   e.preventDefault();
-
-  
-// })

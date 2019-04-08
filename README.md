@@ -42,13 +42,20 @@ background-color: beige;
 
 ![vt100 bottom](img/vt100bottom.jpeg)
 
+## Good Moments
+- Learned a lot about gradients and box-shadows
+- LEDs
+- Fixed size screen that is responsive
 
-## To Do:
+## Issues
+- Inner edge on the screen bezel
+  - Tried 4 different ways, all had issues. Went with the one with the least issues
+- Flickering inconsistent (projects vs. quotes)
+- Hamburger menu stays hidden
+- Responsiveness is iffy at small screens
 
-- Finish Blinking Cursor Effect
-- Style footer icons as keyboard logos
-- Text distort effect super cpu intense
-- Reposition profile photo */
+## To Do
+- Blinking Cursor Effect
 - CPU demands: make a different text-glitch and scan line
 - Learn about :before and :after for styling
 - Add shadows or gradients to the inside bezel to add depth/light bleed effect
@@ -56,6 +63,9 @@ background-color: beige;
 - Quotes don't flicker in
 - Nav buttons fill in the header text with "loading..." then title
 - Make keys map to press of there lower side characters (change, not fn's)
+- Style footer icons as keyboard logos
+- Text distort effect super cpu intense
+- Reposition profile photo
 - Make it so when on project button, clicking it again doesn't toggle slide
 - Hamburger button bug: if you toggle it down and then re-expand, it stays hidden 
 - Make whole keyboard slide up, not buttons, for hamburger menu
