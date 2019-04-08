@@ -49,7 +49,7 @@ background-color: beige;
 - No css frameworks other than screen pixes and normalize
 
 ## Issues
-- Inner edge on the screen bezel
+- Inner edge on the screen bezel + Screen pop out/bend
   - Tried 4 different ways, all had issues. Went with the one with the least issues
 - Flickering inconsistent (projects vs. quotes)
 - Hamburger menu stays hidden
