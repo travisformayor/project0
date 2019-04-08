@@ -2,14 +2,14 @@
 Lessons from building a prototype protfolio page
 
 ## Design Landmarks
-![VT100](img/vt100.jpg)
-![keyboard](img/keyboard.jpeg)
-
 
 #### W3C Color Name: Beige
 ```css
 background-color: beige;
 ```
+![VT100](img/vt100.jpg)
+![keyboard](img/keyboard.jpeg)
+
 
 ## Concepts Used
 ### Drawing with CSS...
