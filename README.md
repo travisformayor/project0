@@ -46,6 +46,7 @@ background-color: beige;
 - Learned a lot about gradients and box-shadows
 - LEDs
 - Fixed size screen that is responsive
+- No css frameworks other than screen pixes and normalize
 
 ## Issues
 - Inner edge on the screen bezel
