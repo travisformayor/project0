@@ -16,12 +16,6 @@
   --dark-bezel: #333;
   --screen-color: #444;
   --key-tray: rgb(77, 71, 71);
-
-  /* 4:3 Aspect Ratio => H = W * 0.75 */
-  --terminal-width: 40vw;
-  --terminal-height: 30vw;
-  /* --neg-terminal-width: -40vw; */
-  /* --neg-terminal-height: -30vw; */
 }
 /* To Do */
 /* reposition profile photo */
@@ -46,7 +40,7 @@
 body {
   font-family: 'VT220', sans-serif;
   letter-spacing: .25em;
-  background: linear-gradient(lightcyan, coral);
+  background: linear-gradient(lightcyan, rgb(255, 192, 141));
   background-attachment: fixed;
 }
 main {
@@ -83,13 +77,13 @@ p {
   background: radial-gradient(circle, rgb(255, 230, 90,0.7), beige 60%); /* Yellow Center Spot */
   border-radius: 15px;
 
-  padding: 0 5vw 10vh;
+  padding: 0 2.5vw 1vh;
   width: 100%;
-  height: 95vh;
+  height: 100vh;
 }
 .bezel-seam {
   display: inline-block; /* "skrinkwrap" */
-  margin: -40px 0 0 50px;
+  margin-top: -40px;
   border-radius: 50px;
   padding: 9px;
   box-shadow: inset 0px 0px 11px rgba(0, 0, 0, 0.8); /* Bezel Seam */
@@ -100,21 +94,32 @@ p {
 
   /* Top Bezel Curve Effect */
   background: linear-gradient(to bottom, var(--dark-bezel) 4%, rgb(134, 134, 134) 9%, var(--dark-bezel) 30%);
-  padding: 25px;
+  padding: 20px;
   padding-top: 100px;
   border-radius: 40px 40px 50px 50px;
+
+  
+
   box-shadow: 0px 0px 11px rgba(0, 0, 0, .8), /* Bezel Seam */
   inset 0 0 150px rgba(0, 0, 0, 0.5); /* Soften the Bezel Curve */
 }
 .inner-bezel {
   display: inline-block;
   /* background-color: yellow; */
+  background-color: var(--dark-bezel);
   
-  border: 50px solid;
-  border-color: blue
-                pink;
+  border-radius: 25px;
+  border-style: solid;
+  border-width: 40px 45px;
+  border-color: rgba(0, 0, 0, 0.5) /* top */
+                rgba(0, 0, 0, 0.2) /* left-right */
+                rgba(0, 0, 0, 0.4);/* bottom */
+  /* box-shadow: 0px 10px 20px rgba(0, 0, 0, .5); */
  /* background: linear-gradient(to top left, transparent 0%, rgba(0,0,0,.1) 50%,rgba(0,0,0,.3) 50%, transparent 100%),
              linear-gradient(to bottom left, transparent 0%, rgba(0,0,0,.3) 50%,rgba(0,0,0,.1) 50%, transparent 100%); */
+
+  box-shadow: 0px -10px 10px rgba(255, 255, 255, 0.3), /* inner bezel top ramp out light effect */
+  5px 10px 10px rgba(0, 0, 0, 0.5); /* inner bezel bottom shadow */
 }
 .term-topbottom {
   border-radius: 50% / 20px;
@@ -126,6 +131,10 @@ p {
 /* .term-sides {
   border-radius: 25px / 50%;
   overflow: hidden;
+} */
+/* .term-screen {
+ 
+
 } */
 
 /* Terminal Screen Content ====================== */
@@ -149,18 +158,25 @@ p {
   z-index: 2; /* Cover the cursor if extended to bottom of screen */
 }
 .terminal {
+  box-shadow: inset 0px 0px 90px rgb(0, 0, 0); /* screen overlay inner edge shadow */
+
+  position: relative; /* Needed to cut off edges on crt class effect */
+
   background-color: var(--terminal-color);
+  /* overflow: hidden; */
 }
 .terminal-area {
   /* padding: 20px 0; */
-  overflow: auto;
+  overflow: hidden;
   position: relative;
 
   padding: 1vw;
 
   /* 4:3 Aspect Ratio => H = W * 0.75 */
-  width: var(--terminal-width);
-  height: var(--terminal-height);
+  width: 75vw;
+  max-width: 800px;
+  /* height: 600px; */
+  height: 60vh;
   /* min-width: 40vw; */
   /* min-height: 30vw; */
   /* max-width: 75vw; */
@@ -212,11 +228,6 @@ img#me {
   font-weight: bolder;
 }
 
-
-
-
-
-
 /* .testimonials {
   display: none;
 } */
@@ -240,11 +251,7 @@ img#me {
 }
 
 /* Navigation Keyboard ========================== */
-.seam-header {
-  margin: 3em 0 0;
-  padding: 8px;
-  box-shadow: inset 0px 0px 11px rgba(0, 0, 0, 0.8); /* Monitor Bottom Seam */
-}
+
 nav.keyboard {
   font-family: 'Roboto', sans-serif;
   letter-spacing: 0.05em;
@@ -255,14 +262,16 @@ nav.keyboard {
   width: 100%;
   /* height: 10vh; */
   /* min-height: 40px; */
+  z-index: 100;
 }
 .key-cover {
   background-color: beige;
   /* width: 100%; */
   /* height: 100%; */
+  /* display: inline-block; */
   margin-top: -5px;
   padding: 15px 2% 0px;
-  /* border-radius: 0 0 25px 25px; */
+  border-radius: 25px 25px 0 0;
   box-shadow: 0px 0px 50px rgba(0, 0, 0, .8),
   inset 30px 0px 60px var(--aged);
   /* border-bottom: 15px solid rgba(170, 170, 86, 0.849); Bottom side */
@@ -285,7 +294,7 @@ nav.keyboard {
   /* box-shadow: 0px 0px 6px rgba(0, 0, 0, 1); */
   height: 100%;
   width: 100%;
-  padding: 0 10px;
+  padding: 0 5px;
   background-color: var(--key-tray);
   /* box-shadow: inset 0px 0px 40px rgb(36, 31, 31, 0.5); */
   box-shadow: inset 0px 0px 50px rgb(0, 0, 0, 0.6);
@@ -303,7 +312,7 @@ nav.keyboard {
   /* display: none; */
 }
 .keyled {
-  margin: .7em 0 .2em;
+  margin: .7em .7em .2em;
   border-radius: 50% / 50%;
   width: 1.25em;
   height: 1.25em;
@@ -318,13 +327,13 @@ nav.keyboard {
 }
 
 .keyborder {
-  margin: 10px 8px;
+  margin: 8px 5px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 1); /* key back border */
   background-color:  var(--button-orange);
-  width: 150px;
-  height: 80px;
+  width: 130px;
+  height: 70px;
   border-radius: 7px;
-  border-width: 15px 15px 25px;
+  border-width: 12px 10px 15px;
   border-style: solid;
   border-color: rgba(0, 0, 0, 0.2)
                 rgba(0, 0, 0, 0.4)
@@ -332,10 +341,10 @@ nav.keyboard {
 }
 .key {
   position: relative;
-  top: -5px;
-  left: -5px;
-  width: 130px;
-  height: 55px;
+  top: -2px;
+  left: -2px;
+  width: 115px;
+  height: 47px;
   color: white;
   text-align: center;
 
@@ -346,19 +355,19 @@ nav.keyboard {
 h2.keytop {
   text-transform: uppercase;
   position: relative;
-  font-size: 1.55em;
+  font-size: 1.3em;
   /* letter-spacing: .1em; */
   padding: 0;
   margin: 0;
-  line-height: 2.5em;
+  line-height: 2.55em;
 }
 p.keybottom {
   font-weight: bolder;
-  font-size: 1em;
+  font-size: .9em;
   letter-spacing: .1em;
   margin-top: 0px;
   transform: rotateX(50deg);
-  line-height: .7em;
+  line-height: .75em;
   color: rgb(175, 175, 175);
 }
 .press { /* add to keyborder on click */
@@ -377,7 +386,7 @@ p.keybottom {
   margin: 0 3px 5px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 1); /* key back border */
   background-color:  lightblue;
-  width: 72px;
+  width: 62px;
   height: 50px;
   border-width: 7px 7px 10px;
 }
@@ -385,7 +394,7 @@ p.keybottom {
   position: relative;
   top: -1px;
   left: -1px;
-  width: 60px;
+  width: 50px;
   height: 35px;
   color: darkslategray;
   background-color: lightgrey;
@@ -394,11 +403,11 @@ p.keybottom {
 .extra-keys h2.keytop {
   text-transform: capitalize;
   font-size: 1em;
-  line-height: 2.25em;
+  line-height: 2.5em;
 }
 .extra-keys p.keybottom {
-  font-size: .75em;
-  line-height: 1.2em;
+  font-size: .65em;
+  line-height: .7em;
   color: darkslategray;
 }
 
@@ -407,9 +416,79 @@ p.keybottom {
 .hide {
   display: none;
 }
+.esc {
+  visibility: hidden;
+}
 
 
 /* Testing ====================================== */
 /* * {
   border: 1px solid red;
 } */
+
+/* Responsive =================================== */
+.terminal-area {
+  /* width: 75vw; */
+  /* height: 65vh; */
+}
+@media only screen and (max-width: 1000px) {
+  .terminal-area { 
+    max-width: 100%; /* Reset and rely on external padding */
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 775px) { /* Nav bar */
+  .key-cover {
+
+    position: absolute;
+    width: 300px; 
+    right: 0;
+    bottom: 0;
+  }
+  .keytray {
+    height: 100%;
+    width: 100%;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding-left: 30px;
+  }
+  .keyholder {
+
+    flex-direction: row ;
+    justify-content: flex-end;
+
+  }
+  .nav-keys {
+    display: none;
+  }
+  .esc {
+    visibility: visible;
+  }
+  .extra-keys {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .terminal-content {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .home .terminal-col.photo {
+    align-self: center;
+  }
+}
+@media only screen and (max-width: 450px) {
+  .case {
+    padding: 0;
+  }
+
+  .bezel-seam {
+    margin-left: -30px;
+    margin-right: -30px;
+
+    
+  }
+}

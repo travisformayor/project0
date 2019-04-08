@@ -6,6 +6,8 @@ console.log('hello');
 // Nav buttons fill in the header text with "loading..." then title
 // Make keys map to press of there lower side characters (change, not fn's)
 // Make it so when on project button, clicking it again doesn't toggle slide
+// Hamburger button bug: if you toggle it down and then re-expand, it stays hidden 
+// Make whole keyboard slide up, not buttons, for hamburger menu
 
 // Flicker on load effect ============= //
 function flicker(elm, direction) {
@@ -79,6 +81,7 @@ $('.keytray').on('click', function(e) {
   switch (activeKey) {
     case 'esc-key':
       console.log('esc');
+      $('.nav-keys').slideToggle();
       // active hamburger
       break;
     case 'home-key':
