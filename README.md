@@ -45,6 +45,7 @@ background-color: beige;
 ## Good Moments
 - Learned a lot about gradients and box-shadows
 - LEDs
+- Yellowing old plastic are inset box-shadows
 - Fixed size screen that is responsive
 - No css frameworks other than screen pixes and normalize
 
