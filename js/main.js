@@ -62,6 +62,7 @@ function cycleQuotes() {
 // Keyboard =========================== //
 $('.extra-keys').slideUp(0);
 let activeKey = 'home-key';
+let $pressed;
 
 $('.keytray').on('click', function(e) {
   if (e.target.classList.contains('clack')) {
@@ -132,8 +133,15 @@ function controlSwitch(key, e) {
     .siblings('.keyled')
     .removeClass('off')
     .addClass('on');
+
+    $pressed = $(e.target.closest('.keyborder'));
+    $pressed.addClass('press');
+    setTimeout(unPress, 250);
 }
 
+function unPress() {
+  $pressed.removeClass('press');
+}
 
 let $submit = $('form.contact');
 let $inputs = $('.contact input, .contact textarea');
