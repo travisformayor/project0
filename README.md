@@ -33,7 +33,7 @@ background-color: beige;
 - Screen Effects <http://aleclownes.com/2017/02/01/crt-display.html>
 
 ### Terminal
-
+Down-rezed the project images and pixelated them entirely with the command line tool ImageMagik
 ```bash
 ➜ convert p1.jpg -resize 15% p1.png
 ➜ convert -scale 33.4% -scale 300% p1.png p1.png
